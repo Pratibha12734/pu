@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Distribution Using Data Structures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #000;
+            color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #222;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .code {
+            background: #333;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .note {
+            background: #333;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 15px 0;
+            animation: slideInLeft 1s ease;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #2b7a78;
+        }
+        .example {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #4CAF50;
+            background: #333;
+            text-align: center;
+            animation: zoomIn 1s ease-in;
+        }
+        .example a {
+            color: #f4f4f9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .example a:hover {
+            color: #4CAF50;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Water Distribution Using Data Structures</h1>
+        <p>Efficient water distribution to neighborhoods is a real-world problem that can be modeled and optimized using graph theory and data structures. Here's an overview:</p>
+        
+        <h2>1. Representation of Neighborhoods</h2>
+        <p>The system is represented as a <strong>Weighted Directed Graph</strong> where:</p>
+        <ul>
+            <li><strong>Nodes:</strong> Represent neighborhoods.</li>
+            <li><strong>Edges:</strong> Represent water connections between neighborhoods, with weights indicating cost, capacity, or distance.</li>
+        </ul>
+
+        <h2>2. Optimization Algorithms</h2>
+        <p>Two primary algorithms are used for water distribution optimization:</p>
+        <ul>
+            <li><strong>Minimum Spanning Tree (MST):</strong>
+                <ul>
+                    <li>Ensures the least-cost network connecting all neighborhoods.</li>
+                    <li>Algorithms: Prim's or Kruskal's.</li>
+                    <li>Example Use: Building a minimal cost pipeline network.</li>
+                </ul>
+            </li>
+            <li><strong>Shortest Path Tree (SPT):</strong>
+                <ul>
+                    <li>Finds the shortest path from a water source to all neighborhoods.</li>
+                    <li>Algorithms: Dijkstra's or Bellman-Ford.</li>
+                    <li>Example Use: Ensuring efficient water delivery.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. User Interaction</h2>
+        <p>Dynamic systems allow for:</p>
+        <ul>
+            <li>Inputting neighborhoods and connections (nodes and edges).</li>
+            <li>Editing edge weights or removing edges dynamically.</li>
+            <li>Visualizing the graph and the results of MST/SPT algorithms.</li>
+        </ul>
+
+        <h2>4. Data Structures in Use</h2>
+        <p>The following data structures are utilized:</p>
+        <ul>
+            <li><strong>Graph:</strong> Stores nodes and edges.</li>
+            <li><strong>Edge List:</strong> Used for representing connections and weights.</li>
+            <li><strong>Heap (Priority Queue):</strong> For efficient edge selection in algorithms like Prim's and Dijkstra's.</li>
+            <li><strong>Coordinate Mapping:</strong> For graph visualization (positioning nodes and edges).</li>
+        </ul>
+
+        <h2>5. Advanced Extensions</h2>
+        <p>Additional algorithms can handle complex scenarios:</p>
+        <ul>
+            <li><strong>Maximum Flow:</strong> Balancing water distribution by considering demand and capacity (e.g., Ford-Fulkerson).</li>
+            <li><strong>Capacity Constraints:</strong> Applying flow algorithms to maintain efficient distribution.</li>
+        </ul>
+
+        <h2>6. Visualization</h2>
+        <p>Dynamic visualization of the graph includes:</p>
+        <ul>
+            <li>Nodes represented as circles with labels.</li>
+            <li>Edges drawn as lines with weights displayed mid-path.</li>
+        </ul>
+        <p>This allows users to understand the network and optimize it interactively.</p>
+
+        <div class="note">
+            <strong>Note:</strong> Efficient water distribution systems not only save costs but also ensure fair and adequate resource allocation to all neighborhoods.
+        </div>
+
+       
+    </div>
+</body>
+</html>

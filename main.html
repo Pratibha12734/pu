@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Management System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url('your-image.jpg') no-repeat center center fixed; /* Replace with your image */
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            justify-content: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 700px;
+            transition: transform 0.2s ease-in-out;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff3366; /* Dark pink color for the header */
+            font-size: 3rem;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+            animation: bounceIn 2s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            60% { transform: translateY(10px); opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+
+        h2 {
+            color: #ff66b2;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            animation: fadeInList 2s ease-in-out;
+        }
+
+        @keyframes fadeInList {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        li {
+            background: #ff3366;
+            color: #fff;
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeInItem 1s ease-in-out;
+        }
+
+        @keyframes fadeInItem {
+            0% { opacity: 0; transform: translateX(-20px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        li:hover {
+            background: #ff80a3;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        li a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Additional styling for responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Water Management System</h1>
+    <div class="container">
+        <h2>BUSINESS CASES</h2>
+        <ul>
+            <li onclick="recordRainfall()"><a href="u.html">Record Daily Rainfall</a></li>
+            <li><a href="w1.html">Check Water Tank Levels</a></li>
+            <li onclick="distributeWater()"><a href="p1d.html">Distribute Water to Neighborhoods</a></li>
+            <li onclick="detectLeakage()"><a href="u.html">Detect Water Leakage in Pipes</a></li>
+            <li onclick="testWaterQuality()"><a href="u11.html">Test Water Quality in Local Sources</a></li>
+            <li onclick="planCropSupply()"><a href="w.html">Plan Water Supply for Crops</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function recordRainfall() {
+            alert('Feature to record daily rainfall will be implemented here.');
+        }
+
+        function distributeWater() {
+            alert('Feature to distribute water to neighborhoods will be implemented here.');
+        }
+
+        function detectLeakage() {
+            alert('Feature to detect water leakage in pipes will be implemented here.');
+        }
+
+        function testWaterQuality() {
+            alert('Feature to test water quality in local sources will be implemented here.');
+        }
+
+        function planCropSupply() {
+            alert('Feature to plan water supply for crops will be implemented here.');
+        }
+    </script>
+</body>
+</html>

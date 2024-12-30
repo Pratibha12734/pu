@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Project: Water Management</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #2c3e50; /* Dark background */
+            color: #ecf0f1; /* Light text */
+        }
+
+        header {
+            background: #34495e; /* Darker blue-gray */
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        nav {
+            width: 20%;
+            background: #1abc9c; /* Green side menu */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        nav a:hover {
+            background: #16a085;
+            transform: translateX(10px);
+        }
+
+        nav a.active {
+            background: #16a085;
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .tab-content {
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #34495e;
+            color: #ecf0f1;
+        }
+
+        /* Image Styling */
+        .image-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .image-container img {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>Course Project: Water Management System</header>
+    <div class="container">
+        <nav>
+            <a href="prob.html" class="active" onclick="showTab('problem')">Problem Statement</a>
+            <a href="city.html" onclick="showTab('city')">City Plan</a>
+            <a href="sdg.html" onclick="showTab('rules')">SDG Rules</a>
+        </nav>
+        <div class="content">
+            <div id="problem" class="tab-content active">
+                <h2>Problem Statement: Water Scarcity and Management</h2>
+                <p>Jaipur faces recurring water scarcity issues due to its semi-arid climate. There is a need for an integrated plan focusing on rainwater harvesting, water recycling, and sustainable usage. Jaipur, the capital city of Rajasthan in India, faces significant water scarcity due to its semi-arid climate and limited natural freshwater resources. The city has historically relied on groundwater and external sources like the Bisalpur Dam and the Chambal River to meet its water needs. However, these sources have been under pressure due to overuse, reduced rainfall, and pollution.</p>
+                <p>The city government has initiated various measures such as:</p>
+                <ul>
+                    <li><strong>Rainwater Harvesting Systems:</strong> Encouraging citizens to install rainwater harvesting systems to collect water during the monsoon season.</li>
+                    <li><strong>Water Recycling Plants:</strong> Establishing sewage treatment plants to recycle water for non-potable uses, particularly for irrigation and industrial purposes.</li>
+                    <li><strong>Awareness Programs:</strong> Promoting water conservation and the reduction of water wastage through public education campaigns.</li>
+                    <li><strong>Role of Technology in Water Management:</strong> Technologies such as smart sensors, data analytics, and automated systems are increasingly used to monitor and manage water usage in real-time. Innovations like water purification systems, leak detection in pipelines, and AI-driven water distribution models help optimize water supply and reduce waste. By harnessing data and technology, water management systems can be more efficient and proactive in addressing scarcity.</li>
+                </ul>
+            </div>
+            <div id="business" class="tab-content">
+                <h2>Business Cases</h2>
+                <p>Innovative water management solutions have the potential to address not only the water scarcity problem but also generate business opportunities through water-saving technologies and sustainable practices.</p>
+            </div>
+            <div id="city" class="tab-content">
+                <h2>City Plan</h2>
+                <p>Jaipur's city plan to address water scarcity involves a combination of modern infrastructure development, community participation, and technology-driven solutions. The city is divided into zones for targeted interventions, ensuring resources are allocated efficiently and effectively.</p>
+                <ul>
+                    <li>Installing smart water meters across households to monitor usage and minimize waste.</li>
+                    <li>Developing centralized reservoirs to store and distribute harvested rainwater.</li>
+                    <li>Creating green spaces and permeable surfaces to aid groundwater recharge.</li>
+                    <li>Implementing zonal water management strategies to ensure equitable distribution.</li>
+                </ul>
+                <div class="image-container">
+                    <img src="path-to-your-image.jpg" alt="City Plan Visualization">
+                </div>
+            </div>
+            <div id="rules" class="tab-content">
+                <h2>SDG Rules</h2>
+                <p>Complying with Sustainable Development Goals (SDGs) related to water conservation, sanitation, and efficient resource utilization to ensure a sustainable future for urban environments.</p>
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2024 Water Management System | Innovating Solutions for Water Scarcity</footer>
+
+    <script>
+        function showTab(tabId) {
+            // Deactivate all links
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            // Activate the clicked link
+            event.target.classList.add('active');
+
+            // Hide all content
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Show the selected content
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

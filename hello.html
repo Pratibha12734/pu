@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jaipur Water Distribution System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .source, .zone {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: #e6f7ff;
+            vertical-align: top;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .source h3, .zone h3 {
+            margin: 10px 0 5px;
+        }
+
+        .line {
+            height: 50px;
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid black;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .zone p {
+            font-size: 12px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jaipur Water Distribution System</h1>
+        <h2>Connecting Water Sources to Distribution Zones</h2>
+
+        <!-- Sources -->
+        <div class="source">
+            <h3>Bisalpur Dam</h3>
+        </div>
+        <div class="source">
+            <h3>Ramgarh Dam</h3>
+        </div>
+        <div class="source">
+            <h3>Groundwater</h3>
+        </div>
+
+        <!-- Arrows -->
+        <div class="line">
+            <div class="arrow"></div>
+        </div>
+
+        <!-- Zones -->
+        <div class="zone">
+            <h3>East Zone</h3>
+            <p>Jawahar Nagar, Tilak Nagar, Gandhi Nagar</p>
+        </div>
+        <div class="zone">
+            <h3>West Zone</h3>
+            <p>Jhotwara, Shastri Nagar, Bapu Nagar</p>
+        </div>
+        <div class="zone">
+            <h3>North Zone</h3>
+            <p>Amber, Jaipur Railway Station, Sindhi Camp</p>
+        </div>
+        <div class="zone">
+            <h3>South Zone</h3>
+            <p>Raja Park, Adarsh Nagar, Malviya Nagar</p>
+        </div>
+    </div>
+</body>
+</html>

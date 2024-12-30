@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Advanced Water Distribution Optimization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+        input, select {
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .graph-visual {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Water Distribution Optimization</h1>
+        <form id="waterForm">
+            <label for="nodes">Enter Neighborhoods (Comma-separated):</label>
+            <input type="text" id="nodes" name="nodes" placeholder="e.g., A, B, C, D" required>
+            
+            <label for="edges">Enter Connections (Format: 'Source,Target,Weight', Comma-separated):</label>
+            <input type="text" id="edges" name="edges" placeholder="e.g., A,B,4, A,C,2, B,D,5" required>
+
+            <label for="algorithm">Choose Algorithm:</label>
+            <select id="algorithm" name="algorithm" required>
+                <option value="mst">Prim's (Minimum Spanning Tree)</option>
+                <option value="kruskal">Kruskal's (Minimum Spanning Tree)</option>
+                <option value="dijkstra">Dijkstra's (Shortest Path)</option>
+                <option value="floyd">Floyd-Warshall (All Pairs Shortest Path)</option>
+            </select>
+            
+            <button type="button" class="btn" onclick="processGraph()">Generate Result</button>
+        </form>
+
+        <div id="result">
+            <!-- Results will be displayed here -->
+        </div>
+
+        <div class="graph-visual">
+            <canvas id="graphCanvas" width="800" height="400" style="border:1px solid #ccc;"></canvas>
+        </div>
+    </div>
+
+    <script>
+        let edges = [];
+        let nodes = [];
+
+        function processGraph() {
+            nodes = document.getElementById('nodes').value.split(',').map(n => n.trim());
+            const edgesInput = document.getElementById('edges').value.split(',').map(e => e.trim());
+            const algorithm = document.getElementById('algorithm').value;
+
+            edges = [];
+            for (let i = 0; i < edgesInput.length; i += 3) {
+                edges.push({
+                    source: edgesInput[i],
+                    target: edgesInput[i + 1],
+                    weight: parseInt(edgesInput[i + 2])
+                });
+            }
+
+            switch (algorithm) {
+                case 'mst':
+                    runPrimsAlgorithm();
+                    break;
+                case 'kruskal':
+                    runKruskalsAlgorithm();
+                    break;
+                case 'dijkstra':
+                    runDijkstraAlgorithm();
+                    break;
+                case 'floyd':
+                    runFloydWarshallAlgorithm();
+                    break;
+                default:
+                    alert('Invalid Algorithm Selected!');
+            }
+
+            drawGraph(nodes, edges);
+        }
+
+        function runPrimsAlgorithm() {
+            // Implement Prim's algorithm here
+            console.log('Running Prim\'s Algorithm...');
+            document.getElementById('result').innerHTML = '<p>Prim\'s Algorithm Result: [Add Calculation]</p>';
+        }
+
+        function runKruskalsAlgorithm() {
+            // Implement Kruskal's algorithm here
+            console.log('Running Kruskal\'s Algorithm...');
+            document.getElementById('result').innerHTML = '<p>Kruskal\'s Algorithm Result: [Add Calculation]</p>';
+        }
+
+        function runDijkstraAlgorithm() {
+            // Implement Dijkstra's algorithm here
+            console.log('Running Dijkstra\'s Algorithm...');
+            document.getElementById('result').innerHTML = '<p>Dijkstra\'s Algorithm Result: [Add Calculation]</p>';
+        }
+
+        function runFloydWarshallAlgorithm() {
+            // Implement Floyd-Warshall algorithm here
+            console.log('Running Floyd-Warshall Algorithm...');
+            document.getElementById('result').innerHTML = '<p>Floyd-Warshall Algorithm Result: [Add Calculation]</p>';
+        }
+
+        function drawGraph(nodes, edges) {
+            const canvas = document.getElementById('graphCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const nodeCoords = {};
+            const radius = 20;
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const angleIncrement = (2 * Math.PI) / nodes.length;
+
+            // Draw nodes
+            nodes.forEach((node, index) => {
+                const angle = index * angleIncrement;
+                const x = centerX + 200 * Math.cos(angle);
+                const y = centerY + 200 * Math.sin(angle);
+                nodeCoords[node] = { x, y };
+
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                ctx.fillStyle = "#4CAF50";
+                ctx.fill();
+                ctx.strokeStyle = "#000";
+                ctx.stroke();
+
+                ctx.fillStyle = "#fff";
+                ctx.font = "14px Arial";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText(node, x, y);
+            });
+
+            // Draw edges
+            edges.forEach(edge => {
+                const { source, target, weight } = edge;
+                const start = nodeCoords[source];
+                const end = nodeCoords[target];
+
+                ctx.beginPath();
+                ctx.moveTo(start.x, start.y);
+                ctx.lineTo(end.x, end.y);
+                ctx.strokeStyle = "#000";
+                ctx.stroke();
+
+                const midX = (start.x + end.x) / 2;
+                const midY = (start.y + end.y) / 2;
+                ctx.fillStyle = "#000";
+                ctx.font = "12px Arial";
+                ctx.fillText(weight, midX, midY);
+            });
+        }
+    </script>
+</body>
+</html>

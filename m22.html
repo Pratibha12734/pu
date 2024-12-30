@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratibha M Patil - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('isw.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            color: #ff66cc;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px #ff66cc, 0 0 20px #ff66cc;
+            }
+            to {
+                text-shadow: 0 0 20px #ff66cc, 0 0 30px #ff66cc;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #ff99cc;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(255, 102, 204, 0.7);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding: 15px;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .info div {
+            flex: 1;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            background: #333;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .info div:hover {
+            background: #444;
+            transform: translateY(-5px);
+        }
+
+        .info div span {
+            font-weight: bold;
+            color: #ff66cc;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .links a {
+            margin: 0 20px;
+            color: #ff66cc;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #ff3385;
+            transform: translateY(-5px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Welcome Section -->
+        <h1>Welcome to My Portfolio</h1>
+      
+        <h2>Pratibha M Patil</h2>
+
+      
+
+        <!-- About Me Section -->
+        <div class="section">
+            <h2>About Me</h2>
+            <div class="info">
+                <div><span>Hometown:</span> Gorabal, Savadatti Yallamma</div>
+                <div><span>USN:</span> 01FE24BCS413</div>
+                <div><span>Roll No:</span> 463</div>
+                <div><span>College:</span> KLE Technological University (BVB), Hubballi</div>
+            </div>
+            <div class="info">
+                <div><span>Course Name:</span> Algorithmic Problem Solving</div>
+                <div><span>Course Code:</span> 24ECSC205</div>
+                <div><span>Instructor:</span> Arundhati Aralimatti</div>
+                <div><span>Domain:</span> Google</div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="info">
+                <div><span>Languages:</span> Python, Java</div>
+                <div><span>Technologies:</span> Data Structures, Cloud Computing</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

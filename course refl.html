@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures and Algorithms</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #121212;
+            color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, #6200ea, #03dac5);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #03dac5;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            background: #292929;
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #bbb;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        ul li:hover {
+            background: #03dac5;
+            color: #121212;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Structures and Algorithms</h1>
+    </header>
+    <main>
+        <section>
+           <center> <h2>About Data Structures and Algorithms</h2></center>
+            <p><center>
+                Data Structures and Algorithms (DSA) form the foundation of computer <b>science and software engineering.
+                Data structures provide efficient ways to<b> organize and manipulate data, while algorithms are systematic
+                methods<b> to solve problems using these structures. Together, they enable the creation <b>of optimized
+                solutions for complex computational challenges.
+            </p>
+            <p>
+                Mastery of DSA is crucial for solving real-world problems in fields such as AI, databases, networking,
+                and system design. Choosing the right data structure or algorithm can significantly impact a program's
+                performance in terms of speed and memory usage.
+           </center> </p>
+        </section>
+        <section>
+            <h2>Linear and Non-linear Data Structures</h2>
+            <ul>
+                <u><li><strong>Arrays:</strong></u> Contiguous memory blocks for storing data elements of the same type.</li>
+                <u><li><strong> Linked List:</strong></u> A sequence of nodes where each node points to the next, providing dynamic memory allocation.</li>
+                <u><li><strong> Stacks and Queues:</strong></u> Stacks follow LIFO (Last In, First Out), while Queues follow FIFO (First In, First Out).</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Trees</h2>
+            <ul>
+                <u><li><strong>Binary Trees:</strong></u>  Each node has at most two children.</li>
+                <u><li><strong> 2-3 Trees:</strong></u>  Balanced search trees where nodes have 2 or 3 children.</li>
+                <u><li><strong> Lookup Table:</strong></u>  Data structures for mapping keys to values.</li>
+                <u><li><strong> Tries:</strong> </u> Tree-like structures for storing strings efficiently.</li>
+                <u><li><strong> AVL Trees:</strong></u>  Self-balancing binary search trees.</li>
+                <u><li><strong> Red-Black Trees:</strong></u>  Binary trees with color properties to maintain balance.</li>
+                <u><li><strong> Skip Lists:</strong></u>  Layered linked lists for fast search and insertion.</li>
+                <u><li><strong> Segment Trees:</strong></u>  Tree structures for range queries and updates.</li>
+            </ul>
+        </section>
+         <section>
+            <h2>Graphs</h2>
+            <ul>
+                <li><strong>Weighted/Unweighted:</strong> Edges can have weights or not.</li>
+                <li><strong>Directed/Undirected:</strong> Directional or bidirectional edges.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Other Data Structures</h2>
+            <ul>
+                <li><strong>Heaps:</strong> Complete binary trees for priority queues.</li>
+                <li><strong>HashMaps:</strong> Key-value pairs stored with hash functions.</li>
+                <li><strong>Union-Find:</strong> Efficient data structure for disjoint set operations.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Algorithms</h2>
+            <h3>Sorting Algorithms</h3>
+            <ul>
+                <li><strong>Bubble Sort:</strong> Repeatedly swap adjacent elements if they are in the wrong order.</li>
+                <li><strong>Insertion Sort:</strong> Build the sorted list one element at a time.</li>
+                <li><strong>Selection Sort:</strong> Repeatedly find the smallest element and place it in sorted order.</li>
+                <li><strong>Merge Sort:</strong> Divide the array into halves, sort and merge.</li>
+                <li><strong>Quick Sort:</strong> Use a pivot to partition and recursively sort subarrays.</li>
+                <li><strong>Heap Sort:</strong> Utilize a heap to sort the elements.</li>
+            </ul>
+            <h3>String Matching Algorithms</h3>
+            <ul>
+                <li><strong>Brute Force:</strong> Compare all substrings.</li>
+                <li><strong>Boyer-Moore:</strong> Use mismatched characters to skip sections.</li>
+                <li><strong>KMP:</strong> Use partial match information to skip characters.</li>
+                <li><strong>Rabin-Karp:</strong> Hash substring and compare hashes.</li>
+            </ul>
+            <h3>Graph Algorithms</h3>
+            <ul>
+                <li><strong>Breadth-First Search (BFS):</strong> Explore neighbors level by level.</li>
+                <li><strong>Depth-First Search (DFS):</strong> Explore as deep as possible before backtracking.</li>
+                <li><strong>Kruskal’s Algorithm:</strong> Minimum spanning tree using edge weights.</li>
+                <li><strong>Dijkstra’s Algorithm:</strong> Shortest path in a weighted graph.</li>
+                <li><strong>Bellman-Ford Algorithm:</strong> Handles negative weights in shortest paths.</li>
+                <li><strong>Floyd-Warshall Algorithm:</strong> All-pairs shortest paths.</li>
+            </ul>
+            <h3>Backtracking Algorithms</h3>
+            <ul>
+                <li><strong>N-Queen Problem:</strong> Place N queens on a chessboard without attacks.</li>
+                <li><strong>Subset Generation:</strong> Generate all subsets of a set.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

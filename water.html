@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Management System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('daa1.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover;
+            color: #ff66b2; /* Pink text color */
+            animation: fadeInBody 1.5s ease-in-out; /* Fade-in animation for body */
+        }
+
+        @keyframes fadeInBody {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            background: rgba(255, 182, 193, 0.8); /* Light pink semi-transparent background */
+            padding: 25px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(200, 200, 200, 0.5); /* Soft gray shadow */
+            width: 100%;
+            max-width: 700px;
+            animation: fadeInContainer 2s ease-in-out; /* Animation for container */
+        }
+
+        @keyframes fadeInContainer {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff1493; /* Bright pink for header text */
+            margin-bottom: 20px;
+            font-weight: 900; /* Make the font bold */
+            font-size: 3rem; /* Increase font size */
+            text-transform: uppercase;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7); /* Strong text shadow for better visibility */
+            animation: slideIn 2s ease-in-out; /* Header slide-in animation */
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .folder {
+            background: linear-gradient(90deg, #ffb6c1, #ff66b2); /* Light pink gradient */
+            color: #ffffff; /* White text */
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            animation: fadeInFolder 1.5s ease-in-out; /* Folder animation */
+        }
+
+        @keyframes fadeInFolder {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .folder:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(200, 200, 200, 0.3);
+        }
+
+        .folder a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Water Management System</h1>
+    <div class="container">
+        <div class="folder"><a href="m22.html">My Portfolio</a></div>
+        <div class="folder"><a href="tm.html">Team Members</a></div>
+        <div class="folder"><a href="ABCO.html">About Course</a></div>   
+        <div class="folder"><a href="course refl.html">Course Reflection</a></div>
+        <div class="folder"><a href="main1111.html">Business Cases</a></div>
+        <div class="folder"><a href="prob.html">About Project</a></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            background: #2e8b57;
+            color: #fff;
+            font-size: 2.5em;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .team-member {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .details {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 1.5em;
+            color: #2e8b57;
+            margin: 10px 0 5px;
+        }
+
+        .info {
+            font-size: 0.9em;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .bio {
+            font-size: 0.95em;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meet Our Team</h1>
+    <div class="team-container">
+        <!-- Team Member 1 -->
+        <div class="team-member">
+            <img src="me1.jpg" alt="Pratibha M Patil" class="profile-img">
+            <div class="details">
+                <h2 class="name">Pratibha M Patil</h2>
+                <p class="info">USN: 01FE24BCS413</p>
+                <p class="info">Roll No: 463</p>
+                <p class="bio">Distributing water to neighborhoods focuses on optimizing flow and meeting demand efficiently.</p>
+            </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-member">
+            <img src="ummid.jpg" alt="Ummidasalma Mulla" class="profile-img">
+            <div class="details">
+                <h2 class="name">Ummidasalma Mulla</h2>
+                <p class="info">USN: 01FE24BCS407</p>
+                <p class="info">Roll No: 457</p>
+                <p class="bio">Recording daily rainfall involves monitoring and
+                              storing data for analysis and forecasting.</p>
+            </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-member">
+            <img src="rakshita.jpg" alt="Rakshita G" class="profile-img">
+            <div class="details">
+                <h2 class="name">Rakshita G</h2>
+                <p class="info">USN: 01FE24BCS410</p>
+                <p class="info">Roll No: 460</p>
+                <p class="bio">Checking water tank levels ensures consistent
+                               monitoring to prevent shortages or overflows</p>
+            </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="team-member"><center>
+            <img src="w1.jpg" alt="Md Waseem Naikar" class="profile-img">
+            <div class="details">
+                <h2 class="name">Md Waseem Naikar</h2>
+                <p class="info">USN: 01FE24BCS406</p>
+                <p class="info">Roll No: 456</p>
+                <p class="bio">Identify areas with the highest water consumption to prioritize
+                               water-saving efforts and ensure <b>equitable distribution of water resources.</p>
+           </center> </div>
+        </div>
+    </div>
+</body>
+</html>

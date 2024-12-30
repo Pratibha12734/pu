@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAA Course Overview</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #0f2027; /* Dark gradient background */
+            background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #1c2833;
+            padding: 20px;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #f39c12;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: slideInDown 1s ease-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 5px #000;
+            animation: fadeIn 2s ease;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1f2833;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+            animation: floatUp 1s ease-in-out forwards;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(243, 156, 18, 0.1);
+            transform: skewX(-45deg);
+            transition: left 0.3s ease;
+        }
+
+        .card:hover:before {
+            left: 100%;
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            color: #f39c12;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #dcdcdc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c2833;
+            font-size: 1rem;
+            color: #f4f4f4;
+            border-top: 2px solid #f39c12;
+            margin-top: 40px;
+            animation: slideInUp 1s ease-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Design and Analysis of Algorithms
+    </header>
+
+    <div class="container">
+        <div class="title">
+            Master the Core Concepts of DAA
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Trees</h3>
+                <p>Dive into binary trees, AVL trees, and Red-Black trees to understand hierarchical data structures and their applications.</p>
+            </div>
+            <div class="card">
+                <h3>Algorithm Efficiency</h3>
+                <p>Learn to evaluate the time and space complexity of algorithms and optimize them for better performance.</p>
+            </div>
+            <div class="card">
+                <h3>Sorting Algorithms</h3>
+                <p>Explore quicksort, mergesort, bubble sort,selection sort, insertion sort,and heapsort to sort data efficiently and understand their underlying principles.</p>
+            </div>
+            <div class="card">
+                <h3>Graph Traversals</h3>
+                <p>Master depth-first search (DFS) and breadth-first search (BFS) for navigating graphs effectively.</p>
+            </div>
+            <div class="card">
+                <h3>Shortest Path Algorithms</h3>
+                <p>Analyze Dijkstra's, Bellman-Ford, and Floyd-Warshall algorithms to solve shortest path problems in graphs.</p>
+            </div>
+            <div class="card">
+                <h3>Spanning Trees</h3>
+                <p>Learn Prim’s and Kruskal’s algorithms to find minimum spanning trees for weighted graphs.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Design and Analysis of Algorithms | Innovating in Computing Education
+    </footer>
+</body>
+</html>
